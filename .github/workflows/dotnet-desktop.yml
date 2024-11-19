@@ -18,7 +18,8 @@ jobs:
 
     # Cambiar la base-tag en index.html si se requiere
     - name: Change base-tag in index.html
-      run: sed -i 's/<base href="\/" \/>/<base href="\/BlazorApp\/" \/>/g' release/wwwroot/index.html
+      run: sed -i 's|<base href="\/" \/>|<base href="\/" \/>|g' release/wwwroot/index.html
+
 
     # Copiar index.html a 404.html para manejar errores 404
     - name: Copy index.html to 404.html
