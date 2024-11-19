@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '9.x'  # Especificar la versión correcta
+        dotnet-version: 9.*
 
     # Publicar el proyecto Blazor WASM en la carpeta 'release'
     - name: Publish Blazor WASM Project
