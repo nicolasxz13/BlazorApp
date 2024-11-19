@@ -1,5 +1,5 @@
 
-name: Blazo Web Assembly
+name: Blazor Web Assembly
 
 on:
   workflow_dispatch:
