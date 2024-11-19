@@ -1,5 +1,5 @@
 
-name: .NET Core Desktop
+name: Blazo Web Assembly
 
 on:
   workflow_dispatch:
