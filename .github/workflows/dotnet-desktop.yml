@@ -12,11 +12,11 @@ jobs:
     # Checkout
     - uses: actions/checkout@v2
 
-    # Configura el SDK de .NET 9
+    # Configurar el SDK de .NET
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: 9.0.x
+        dotnet-version: '9.x'  # Especificar la versión correcta
 
     # Publicar el proyecto Blazor WASM en la carpeta 'release'
     - name: Publish Blazor WASM Project
