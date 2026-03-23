@@ -19,10 +19,12 @@ jobs:
     # Publicar el proyecto Blazor WASM en la carpeta 'release'
     - name: Publish Blazor WASM Project
       run: dotnet publish BlazorApp.csproj -c Release -o release --nologo
-
-    # Cambiar la base-tag en index.html si se requiere
-    - name: Change base-tag in index.html
-      run: sed -i 's|<base href="\/" \/>|<base href="\/" \/>|g' release/wwwroot/index.html
+  
+    - name: Rewrite base href
+      uses: SteveSandersonMS/ghaction-rewrite-base-href@5b54862a8831e012d4f1a8b2660894415fdde8ec # v1.1.0
+      with:
+        html_path: release/wwwroot/index.html
+        base_href: /BlazorApp/
 
     # Copiar index.html a 404.html para manejar errores 404
     - name: Copy index.html to 404.html
