@@ -9,7 +9,7 @@ jobs:
 
     steps:
     # Checkout
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     # Publicar el proyecto Blazor WASM en la carpeta 'release'
     - name: Publish Blazor WASM Project
